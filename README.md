@@ -1,3 +1,40 @@
+VS Build
+=======
+
+1.拉取代码
+```sh
+git clone -b 1.4 https://github.com/zengzhihua24/curlcpp.git curlcpp-1.4
+```
+
+2.检查libcurl
+```
+libcurl-vc16-x86-release-static-ipv6-sspi-schannel\
+  include\
+  lib\
+```
+
+3.运行cmake.bat生成vs工程
+```bash
+mkdir build-vs2019-x86 && cd build-vs2019-x86 && cmake -G "Visual Studio 16 2019" -A Win32 .. -DCMAKE_INSTALL_PREFIX=.\cmake_install_prefix -DCURL_INCLUDE_DIR=..\libcurl-vc16-x86-release-static-ipv6-sspi-schannel\include -DCURL_LIBRARY=libcurl_a.lib
+```
+
+4.打开curlcpp.sln，配置curlcpp工程
+```
+预处理器定义：CURL_STATICLIB
+附加库目录：$(SolutionDir)..\libcurl-vc16-x86-release-static-ipv6-sspi-schannel\lib
+附加依赖项：
+libcurl_a.lib
+Ws2_32.lib
+Wldap32.lib
+winmm.lib
+Crypt32.lib
+Normaliz.lib
+```
+
+5.右键curlcpp工程生成curlcpp.lib
+
+<br>
+
 curlcpp
 =======
 
