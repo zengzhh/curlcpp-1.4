@@ -1,0 +1,1 @@
+rmdir /q /s build-vs2019-x86 && mkdir build-vs2019-x86 && cd build-vs2019-x86 && cmake -G "Visual Studio 16 2019" -A Win32 .. -DCMAKE_INSTALL_PREFIX=.\cmake_install_prefix -DCURL_INCLUDE_DIR=..\libcurl-vc16-x86-release-static-ipv6-sspi-schannel\include -DCURL_LIBRARY=libcurl_a.lib && pause

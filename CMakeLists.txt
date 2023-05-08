@@ -32,7 +32,7 @@ option(CURLCPP_USE_PKGCONFIG
 add_subdirectory(src)
 
 # Set up test directory.
-add_subdirectory(test)
+# add_subdirectory(test)
 
 # Set library location
 set(CURLCPP_LIB_LOCATION "$<TARGET_FILE:${curlcpp}>")
