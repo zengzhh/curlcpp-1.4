@@ -1,0 +1,13 @@
+.vs/
+.vscode/
+ipch/
+Release/
+Debug/
+
+*.suo
+*.VC.db
+*.VC.VC.opendb
+*.iobj
+*.pdb
+*.aps
+*.vcxproj.user
